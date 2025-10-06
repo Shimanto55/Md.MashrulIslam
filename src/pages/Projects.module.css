@@ -1,9 +1,0 @@
-@reference "../index.css";
-.wrap { @apply max-w-5xl mx-auto py-12; }
-.h2 { @apply text-3xl font-bold text-cyan-400 mb-6; }
-.grid { @apply grid md:grid-cols-2 gap-6; }
-.card { @apply bg-gray-900 border border-gray-800 rounded-xl p-5; }
-.title { @apply text-xl font-semibold text-gray-100; }
-.desc { @apply text-gray-400 mt-2; }
-.links { @apply mt-3 flex gap-3; }
-.a { @apply text-cyan-400 hover:underline; }

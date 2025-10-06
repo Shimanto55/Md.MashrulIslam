@@ -1,0 +1,25 @@
+.intro-grid{
+  display:grid;gap:16px;
+  grid-template-columns: 1fr;
+}
+@media(min-width:760px){
+  .intro-grid{grid-template-columns: repeat(3, 1fr);}
+}
+.intro-card{
+  text-decoration:none;color:var(--text);
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:20px;transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.intro-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(2, 132, 199, .12);
+  border-color:#cbd5e1;
+}
+.intro-icon{font-size:1.6rem}
+.intro-title{margin:.4rem 0 .25rem;font-weight:800}
+.intro-desc{color:var(--muted);line-height:1.7;margin:0 0 .5rem}
+.intro-cta{
+  font-weight:600;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}

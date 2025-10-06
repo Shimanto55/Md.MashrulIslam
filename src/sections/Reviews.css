@@ -1,0 +1,37 @@
+.reviews-sub{color:var(--muted);margin-top:-6px;margin-bottom:20px}
+
+.reviews-carousel{
+  position:relative;min-height:220px;
+}
+.review-card{
+  position:absolute;top:0;left:0;right:0;opacity:0;transform:translateY(15px);
+  transition:opacity .4s ease, transform .4s ease;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:24px;
+}
+.review-card.is-active{opacity:1;transform:translateY(0)}
+
+.review-text{
+  color:var(--muted);
+  font-size:1.05rem;
+  line-height:1.8;
+  margin-bottom:1rem;
+  font-style:italic;
+}
+
+.review-person{display:flex;align-items:center;gap:.8rem}
+.review-photo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--accent)}
+.review-name{font-weight:800}
+.review-role{color:var(--muted);font-size:.9rem}
+
+.review-dots{
+  display:flex;justify-content:center;gap:.4rem;margin-top:200px;
+}
+.dot{
+  width:10px;height:10px;border-radius:50%;border:none;cursor:pointer;
+  background:#cbd5e1;
+  transition:background .2s ease;
+}
+.dot.is-active{background:linear-gradient(135deg,var(--accent),var(--accent2))}

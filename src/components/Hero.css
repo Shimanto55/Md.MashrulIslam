@@ -1,0 +1,22 @@
+/* Uses local /public/hero.jpg so it always works in Vite and GitHub Pages */
+.hero{
+  min-height:60vh;
+  display:grid;
+  place-items:center;
+  border-bottom:1px solid var(--line);
+
+  /* soft overlay + your image */
+  background-image:
+    linear-gradient(to bottom right, rgba(247,249,251,.85), rgba(247,249,251,.75)),
+    url("/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-inner{text-align:center;padding:40px 0;max-width:900px}
+.kicker{display:inline-block;border:1px solid var(--line);padding:.3rem .6rem;border-radius:999px;
+  color:var(--muted);background:#ffffffcc;font-size:.8rem}
+.accent{background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);max-width:720px;margin:10px auto 0;line-height:1.8}
+.cta-row{display:flex;justify-content:center;gap:.6rem;margin-top:16px;flex-wrap:wrap}

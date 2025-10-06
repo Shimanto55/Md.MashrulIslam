@@ -1,0 +1,13 @@
+.scroll-top{
+  position:fixed;bottom:24px;right:24px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;font-size:1.4rem;
+  border:none;border-radius:50%;width:46px;height:46px;
+  box-shadow:0 4px 12px rgba(14,165,233,.3);
+  cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;
+  z-index:99;
+}
+.scroll-top:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(14,165,233,.4);
+}

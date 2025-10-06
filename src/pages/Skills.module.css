@@ -1,5 +1,0 @@
-@reference "../index.css";
-.wrap { @apply max-w-3xl mx-auto py-12; }
-.h2 { @apply text-3xl font-bold text-cyan-400 mb-4; }
-.list { @apply grid grid-cols-2 gap-3 text-gray-300; }
-.badge { @apply bg-gray-800 rounded px-3 py-2; }
