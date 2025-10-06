@@ -1,22 +1,25 @@
 import type { ReactNode } from "react";
+import Navbar from "../components/Navbar";
 
-type MainLayoutProps = {
-  children: ReactNode;
-};
+import styles from "./MainLayout.module.css";
+
+type MainLayoutProps = { children: ReactNode };
 
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 font-roboto">
-      <header className="py-5 text-center border-b border-gray-800">
-        <h1 className="text-3xl font-bold text-cyan-400">
-          Md. Mashrul Islam
-        </h1>
-        <p className="text-gray-400 text-sm">Web Developer | Cybersecurity Enthusiast</p>
+    <div className={styles.shell}>
+      <Navbar />
+
+      <header className={styles.header}>
+        <h1 className={styles.title}>Md. Mashrul Islam</h1>
+        <p className={styles.subtitle}>
+          Web Developer | Cybersecurity Enthusiast
+        </p>
       </header>
 
-      <main className="max-w-5xl mx-auto p-6">{children}</main>
+      <main className={styles.main}>{children}</main>
 
-      <footer className="text-center py-4 text-gray-500 text-sm border-t border-gray-800">
+      <footer className={styles.footer}>
         © {new Date().getFullYear()} Md. Mashrul Islam. All rights reserved.
       </footer>
     </div>

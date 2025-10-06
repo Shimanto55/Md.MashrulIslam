@@ -1,17 +1,27 @@
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Labs from "./pages/Labs";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import Resume from "./pages/Resume";
 
 export default function App() {
   return (
     <MainLayout>
-      <section className="text-center py-16">
-        <h2 className="text-4xl font-bold text-cyan-400 mb-4">
-          Welcome to My Portfolio 🚀
-        </h2>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          I’m a passionate Web Developer skilled in React, TypeScript, and MERN Stack — currently
-          exploring the world of Cybersecurity.
-        </p>
-      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/labs" element={<Labs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
     </MainLayout>
   );
 }

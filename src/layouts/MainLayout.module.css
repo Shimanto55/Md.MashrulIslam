@@ -1,0 +1,27 @@
+@reference "../index.css";
+
+/* Page shell */
+.shell {
+  @apply min-h-screen bg-gray-950 text-gray-100;
+}
+
+/* Header */
+.header {
+  @apply py-6 text-center border-b border-gray-800;
+}
+.title {
+  @apply text-3xl font-extrabold text-cyan-400;
+}
+.subtitle {
+  @apply text-gray-400 text-sm;
+}
+
+/* Main content wrapper */
+.main {
+  @apply max-w-5xl mx-auto p-6;
+}
+
+/* Footer */
+.footer {
+  @apply text-center py-6 text-gray-500 text-sm border-t border-gray-800;
+}
