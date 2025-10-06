@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shimanto55.github.io/Md.MashrulIslam/sitemap.xml

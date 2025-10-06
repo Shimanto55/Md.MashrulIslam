@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/Md.MashrulIslam/", // ⚠️ your repo name
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
