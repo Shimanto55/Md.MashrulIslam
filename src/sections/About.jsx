@@ -1,4 +1,5 @@
 import "./About.css";
+import mePhoto from "../assets/me.jpeg";
 
 export default function About() {
   return (
@@ -75,7 +76,7 @@ export default function About() {
         <div className="about-photo">
           <figure className="photo-frame">
             <img
-              src="/me.jpeg"
+              src= {mePhoto}
               alt="Md. Mashrul Islam"
               className="photo-img"
             />
