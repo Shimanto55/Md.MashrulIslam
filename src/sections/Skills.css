@@ -1,37 +1,227 @@
-.skills-head{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.skills-sub{color:var(--muted);margin:0}
+/* Header */
 
-.skills-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:14px 0 18px}
-.skills-tab{
-  padding:.55rem .85rem;border-radius:999px;border:1px solid var(--line);
-  background:#fff;color:var(--muted);font-weight:700
+.skills-head{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+  margin-bottom:4px;
 }
-.skills-tab:hover{border-color:#cbd5e1}
-.skills-tab.is-active{color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent}
+
+.skills-sub{
+  color:var(--muted);
+  margin:0;
+  font-size:.94rem;
+}
+
+/* Tabs */
+
+.skills-tabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin:14px 0 18px;
+}
+
+.skills-tab{
+  padding:.55rem .9rem;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--muted);
+  font-weight:700;
+  font-size:.88rem;
+}
+
+.skills-tab:hover{
+  border-color:#cbd5e1;
+}
+
+.skills-tab.is-active{
+  color:#fff;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border-color:transparent;
+}
+
+/* Grid of stack cards */
 
 .skills-grid{
-  display:grid;gap:14px;
-  grid-template-columns:1fr;
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
 }
-@media(min-width:760px){.skills-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1100px){.skills-grid{grid-template-columns:1fr 1fr 1fr}}
 
-.skill-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
-.skill-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.skill-name{font-weight:800}
-.skill-val{color:var(--muted);font-weight:700}
+/* Stack card */
 
-.bar{height:10px;background:#eef2f7;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
-.bar-fill{
+.skill-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:14px 14px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  opacity:0;
+  transform:translateY(12px) scale(.98);
+  animation:skillFadeUp .4s ease-out forwards;
+}
+
+.skill-card-visible{
+  /* animation keyframe handles the actual transition */
+}
+
+.skill-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:.75rem;
+}
+
+.skill-name{
+  margin:0;
+  font-weight:800;
+  font-size:1rem;
+}
+
+.skill-summary{
+  margin:.2rem 0 0;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+/* usage pill */
+
+.skill-usage-pill{
+  align-self:flex-start;
+  padding:.22rem .6rem;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:600;
+  background:rgba(59,130,246,0.08);
+  color:#1d4ed8;
+  border:1px solid rgba(129,140,248,0.6);
+}
+
+/* tools / tags */
+
+.skill-tools{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.35rem;
+}
+
+.skill-tool-tag{
+  font-size:.75rem;
+  padding:.2rem .55rem;
+  border-radius:999px;
+  background:#e5edf7;
+  color:#475569;
+  font-weight:500;
+}
+
+/* I can… list */
+
+.skill-can{
+  margin:.1rem 0 .4rem;
+  padding-left:1.1rem;
+  color:var(--muted);
+  font-size:.88rem;
+  line-height:1.6;
+}
+
+.skill-can li{
+  margin-bottom:.15rem;
+}
+
+/* Usage focus bar (animated but not a mastery % number) */
+
+.usage-wrap{
+  margin-top:auto;
+}
+
+.usage-label{
+  display:block;
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin-bottom:.18rem;
+}
+
+.usage-bar{
+  height:9px;
+  background:#eef2f7;
+  border-radius:999px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.usage-fill{
   --to: 0%;
   height:100%;
   width:0%;
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   border-radius:999px;
 }
-.bar-animate{animation:fill 900ms ease forwards}
-@keyframes fill{
-  to{ width: var(--to) }
+
+.usage-animate{
+  animation:usageFill 900ms ease forwards;
 }
 
-.skills-note{color:var(--muted);margin-top:10px}
+@keyframes usageFill{
+  to{
+    width:var(--to);
+  }
+}
+
+/* Learning focus strip */
+
+.skills-focus{
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(248,250,252,0.9);
+  display:grid;
+  gap:10px;
+}
+
+@media(min-width:780px){
+  .skills-focus{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+.skills-focus-block{
+  padding:4px 2px;
+}
+
+.skills-focus-label{
+  display:block;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--muted);
+  margin-bottom:.15rem;
+}
+
+.skills-focus-text{
+  margin:0;
+  font-size:.9rem;
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* Card entrance animation */
+
+@keyframes skillFadeUp{
+  0%{
+    opacity:0;
+    transform:translateY(12px) scale(.98);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
