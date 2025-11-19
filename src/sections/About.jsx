@@ -74,9 +74,8 @@ export default function About() {
         {/* RIGHT: PHOTO */}
         <div className="about-photo">
           <figure className="photo-frame">
-            {/* Make sure /public/me.jpeg exists */}
             <img
-              src="public/me.jpeg"
+              src="/me.jpeg"
               alt="Md. Mashrul Islam"
               className="photo-img"
             />
